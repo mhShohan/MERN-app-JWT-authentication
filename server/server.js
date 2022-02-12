@@ -1,6 +1,9 @@
 //dependencies
 const express = require('express');
 const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const colors = require('colors');
+
 const { errorHandler } = require('./middleweres/errorMiddlewere');
 
 //init express app
@@ -21,4 +24,8 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 
 // server listing
-app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+mongoose.connect(process.env.MONGO_URI).then(() => {
+    app.listen(PORT, () =>
+        console.log(`http://localhost:${PORT}`.black.bgGreen)
+    );
+});
