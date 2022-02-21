@@ -75,7 +75,7 @@ handler.loginUser = asyncHanlder(async (req, res) => {
 //@route GET /api/users/login
 //@access private
 handler.getMe = asyncHanlder(async (req, res) => {
-  res.json(req.user);
+  res.status(200).json(req.user);
 });
 
 //demo perpose

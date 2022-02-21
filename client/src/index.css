@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  background-color: teal;
 }
 
 a {
@@ -95,19 +96,23 @@ h3 {
 }
 
 .goal {
-  background-color: #f4f4f4;
+  background-color: aquamarine;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
+  border-radius: 4px;
 }
 
 .goal .close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  top: 5px;
+  right: 12px;
   cursor: pointer;
   border: none;
   background: none;
+  color: red;
 }
 
 .form,

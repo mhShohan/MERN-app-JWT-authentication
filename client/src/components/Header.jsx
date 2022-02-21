@@ -16,13 +16,15 @@ export default function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">GoalSetter</Link>
+        <Link to="/">
+          <h1>MERN GoalSetter</h1>
+        </Link>
       </div>
       <ul>
         {user ? (
           <button className="btn" onClick={onClick}>
             <FaSignOutAlt />
-            Login
+            Logout
           </button>
         ) : (
           <>
